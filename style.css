@@ -3,6 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  width: 488px;
+  height: 488px;
+}
 .container {
   width: 488px;
   height: 488px;
