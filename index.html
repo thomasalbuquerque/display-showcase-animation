@@ -5,46 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Display Showcase Animation</title>
     <link rel="stylesheet" href="style.css" />
+    <script defer src="index.js"></script>
   </head>
   <body>
-    <div
-      class="container"
-      onmouseover="setStop(true)"
-      onmouseout="setStop(false)">
-      <div id="b1" class="block">
+    <div class="container">
+      <div
+        id="b1"
+        class="block"
+        onmouseover="highlight(1, true)"
+        onmouseout="highlight(1, false)">
         <img class="image" src="/images/boot1.jpg" />
       </div>
-      <div id="b2" class="block">
+      <div
+        id="b2"
+        class="block"
+        onmouseover="highlight(2, true)"
+        onmouseout="highlight(2, false)">
         <img class="image" src="/images/boot2.jpg" />
       </div>
-      <div id="b3" class="block">
+      <div
+        id="b3"
+        class="block"
+        onmouseover="highlight(3, true)"
+        onmouseout="highlight(3, false)">
         <img class="image" src="/images/boot3.jpg" />
       </div>
-      <div id="b4" class="block">
+      <div
+        id="b4"
+        class="block"
+        onmouseover="highlight(4, true)"
+        onmouseout="highlight(4, false)">
         <img class="image" src="/images/boot4.jpg" />
       </div>
     </div>
-    <script>
-      let stop = false;
-      function setStop(value) {
-        stop = value;
-        console.log(stop)
-      }
-      function alwaysOn() {
-        let counter = 0;
-        setInterval(function() {
-          if (!stop) {
-            console.log(counter)
-            counter++;
-            if(counter === 4){
-              counter = 0;
-            }
-            console.log(`stop em setInterval: ${stop}`)
-          }
-          console.log(`stop em setInterval: ${stop}`)
-        }, 1000);
-      }
-      alwaysOn()
-    </script>
   </body>
 </html>
